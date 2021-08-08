@@ -159,6 +159,11 @@ body {
 
   line-height: 1;
 }
+
+.mobileSidebar {
+  display: none;
+}
+
 th {
   margin: 0;
   padding: 10px 10px;
@@ -220,9 +225,62 @@ td a.disabled:hover {
   background: #464646;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 550px) {
   .sidebar {
     display: none !important;
+    margin: 0px;
+    padding: 0;
+  }
+
+  .hamBurger {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    width: 40px;
+    cursor: pointer;
+    height: 40px;
+    background-color: white;
+    box-shadow: 1px 2px 9px 0px lightgray;
+  }
+
+  .mobileSidebar {
+    visibility: hidden;
+    top: 0%;
+    padding: 40px 5px;
+    width: 100%;
+    position: absolute;
+    height: max-content;
+    background-color: white;
+    box-shadow: 1px 2px 9px 0px lightgray;
+  }
+}
+
+@media (max-width: 610px) {
+  .myNav ul div {
+    margin: 5px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .myNav {
+    display: flex !important;
+  }
+
+  .myNav ul div {
+    margin: 20px;
+  }
+
+  .navContainer {
+    text-align: center;
+    justify-content: center;
+    padding: 30px 0px 0px 0px;
   }
 
   .allContent {

@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import Job from "./Job";
 import Schdule from "./Schdule";
 import SideBar from "./SideBar";
+import "../../App.css";
+
 
 
 
@@ -91,7 +93,7 @@ export default function Admin() {
                                                             </div>
                                                         </div>
                                                     </Link>
-                                                    <Link>
+                                                    <Link to="MeasureSpeaad">
                                                         <div class="myBadge">
                                                             <div class="d-flex">
                                                                 <div class="pl-2">
@@ -192,7 +194,7 @@ export default function Admin() {
                                                             <Link to="/" class="bi bi-table my-font"></Link>
                                                         </div>
                                                         <div class="ml-4 mt-2">
-                                                            <div class="myProgress"></div>
+                                                            <div class="myProgress" />
                                                         </div>
                                                         <div class="ml-4">
                                                             <p class=" navText">90% </p>

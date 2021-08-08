@@ -360,6 +360,10 @@ input[type="date"]::before {
   border-radius: 200px;
 }
 
+table {
+  font-size: 20px;
+}
+
 .guest {
   cursor: pointer;
   width: 80px;
@@ -685,6 +689,12 @@ textarea,
   .minus-m {
     margin-top: 0px !important;
   }
+
+  .taskMobile {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .modal {
@@ -922,6 +932,14 @@ textarea,
   color: #0c95be;
 }
 
+.dot {
+  width: 30px;
+  margin: 20px;
+  border-radius: 30px;
+  padding: 15px 10px;
+  background-color: #006abe;
+}
+
 .progress {
   height: 5rem !important;
   background-color: transparent !important ;
@@ -997,6 +1015,18 @@ textarea,
     margin: 20px 0px 0px 0px !important;
   }
 
+  .scheduleApp {
+    width: 100% !important;
+  }
+
+  .myModal {
+    left: 0% !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .count {
     padding: 10px 20px 17px 20px;
     background-color: #d8eeff;
@@ -1028,6 +1058,12 @@ textarea,
     background-color: #0d6efd;
     /* height: 100px; */
     margin-left: -10px;
+  }
+}
+
+@media (max-width: 1429px) {
+  .taskMobile {
+    margin-left: -40px;
   }
 }
 

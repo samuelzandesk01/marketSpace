@@ -4,7 +4,7 @@ import Home from "./component/frontend/Home";
 import MyAbout from "./component/frontend/MyAbout";
 import Footer from "./component/frontend/Footer";
 import Projects from "./component/frontend/Projects";
-// import Register from "./component/frontend/auth/Register";
+import Register from "./component/frontend/auth/Register";
 import Modal from "./component/frontend/Modal";
 import Admin from "./component/dashboard/Admin";
 import Schdule from "./component/dashboard/Schdule";
@@ -12,11 +12,20 @@ import Schdule from "./component/dashboard/Schdule";
 import DoneTask from "./component/dashboard/DoneTask";
 
 import Break from "./component/dashboard/Break";
+import MeasureSpeed from "./component/dashboard/MeasureSpeed";
+import React, { useState } from "react";
+import Stacks from "./component/dashboard/UI/Stacks";
+import Jobs from "./component/dashboard/Jobs";
 
 export default function App(props) {
+  const [opa, setOpa] = useState("100%");
+  const [task, setTask] = useState("");
+  const [bindTask, setBindTask] = useState([]);
+
   return (
     // <div>
-    //   <Map />
+    //   <MakePost />
+    //   <PostList />
     // </div>
 
     <MyRouter>
@@ -28,7 +37,6 @@ export default function App(props) {
             <Route exact path="/">
               <NavBar />
               <Home />
-              <Footer />
             </Route>
             <Route path="/About">
               <NavBar />
@@ -46,7 +54,23 @@ export default function App(props) {
             <Route path="/dashboard/Schdule" children={Schdule} />
 
             <Route path="/dashboard/Break" component={Break} />
-            <Route path="/dashboard/DoneTask" component={DoneTask} />
+            <Route path="/dashboard/DoneTask">
+              <DoneTask
+                task={task}
+                setTask={setTask}
+                bindTask={bindTask}
+                setBindTask={setBindTask}
+                opa={opa}
+                setOpa={setOpa}
+              />
+            </Route>
+            <Route path="/dashboard/MeasureSpeed" component={MeasureSpeed} />
+            <Route path="/dashboard/UI/Stacks">
+              <Stacks />
+            </Route>
+            <Route path="/dashboard/Jobs">
+              <Jobs />
+            </Route>
           </Switch>
         </div>
       </div>

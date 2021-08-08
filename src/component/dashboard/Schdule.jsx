@@ -39,7 +39,7 @@ const Schdule = () => {
                     </div>
                     <div className="row myContent">
                         <div className="col-xl-3 mr-5 margRemove ">
-                            <div className="myCard ">
+                            <div className="myCard " disabled >
                                 <div className="text">
                                     <div className="d-flex">
                                         <div>
