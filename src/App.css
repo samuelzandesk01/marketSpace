@@ -360,6 +360,14 @@ input[type="date"]::before {
   border-radius: 200px;
 }
 
+.jobTags {
+  margin: 10px 10px 10px 0px;
+  background-color: #0068be23;
+  border-radius: 4px;
+  color: black;
+  padding: 5px 15px;
+}
+
 table {
   font-size: 20px;
 }

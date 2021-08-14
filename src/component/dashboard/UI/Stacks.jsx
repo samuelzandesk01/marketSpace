@@ -23,24 +23,24 @@ export default function Stacks() {
     setSearch(staff.filter((myFilt) => myFilt !== search));
   };
   return (
-    <div style={{ overflowX: "hidden" }}>
+    <div>
       <div className="d-flex">
         <SideBar />
-        <div className="container" style={{ margin: "50px 20px auto" }}>
-          <div className="row">
+        <div className="container stackM">
+          <div className="row mobileBlock">
             <div className="col-xl-6">
               <div className="m-auto">
-                <button className="doneBtn">
+                <button className="doneBtn doneBtnMobile">
                   Filter <i className="bi bi-filter ml-2 mt-2"></i>
                 </button>
               </div>
             </div>
             <div className="col-xl-6 ml-auto">
               <form action="" onSubmit={filterForm}>
-                <div className="d-flex">
+                <div className="d-flex mobileBlock  ">
                   <select
                     placeholder="Type to search..."
-                    style={{ padding: "0px 70px 0px 5px", margin: "0px " }}
+                    className="mySelect"
                     onChange={filterHandler}
                   >
                     <option value="">By with level</option>
@@ -81,17 +81,14 @@ export default function Stacks() {
                   </thead>
                   <tbody>
                     {staff.map((myStaff) => (
-                      <tr style={{ paddingTop: "20px" }}>
+                      <tr className="myTr">
                         <th scope="row">{utils.random(1, 90)}</th>
                         <td>
                           <img
-                            style={{
-                              width: "34px",
-                              backgroundSize: "cover",
-                              backgroundPosition: "center",
-                              backgroundRepeat: "no-repeat",
-                              border: "2px solid #0d6dfd62",
-                            }}
+                            className="staff"
+                            // style={{
+
+                            // }}
                             src={myStaff.profilePhoto}
                             alt=""
                           />

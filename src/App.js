@@ -8,7 +8,6 @@ import Register from "./component/frontend/auth/Register";
 import Modal from "./component/frontend/Modal";
 import Admin from "./component/dashboard/Admin";
 import Schdule from "./component/dashboard/Schdule";
-
 import DoneTask from "./component/dashboard/DoneTask";
 
 import Break from "./component/dashboard/Break";
